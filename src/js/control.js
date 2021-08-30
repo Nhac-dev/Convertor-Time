@@ -182,7 +182,7 @@ export class ControlApp extends NS_Component{
                     case 0:
                         textToPrint += lang == "pt-br"?
                             `Minutos segundos: ${result[index]}<br/>`:
-                            `Day to second: ${result[index]}<br/>`
+                            `Minutes to Second: ${result[index]}<br/>`
                         break;
                     case 1:
                         textToPrint += lang == "pt-br"?
