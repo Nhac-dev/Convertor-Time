@@ -179,6 +179,11 @@ export class ControlApp extends NS_Component{
 
             for(let index in result){
                 switch (ToNum(index)) {
+                    case 0:
+                        textToPrint += lang == "pt-br"?
+                            `Minutos segundos: ${result[index]}<br/>`:
+                            `Day to second: ${result[index]}<br/>`
+                        break;
                     case 1:
                         textToPrint += lang == "pt-br"?
                             `Dias para segundos: ${result[index]}<br/>`:
