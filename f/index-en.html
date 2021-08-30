@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="../src/css/style.css">
+        <meta name="theme-color" content="#3f1b99">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversion Math Formula</title>
+        <script src="../src/vendor/ns.js"></script>
+
+    </head>
+    <body>
+        <div id="app">
+            
+        </div>
+        <script type="module">
+            import {Header} from "../src/js/header.js";
+
+            GetElm("#app").SetChild(new Header().feather)
+            GetElm("#app").AddHTML(`
+                <main id="content-app">
+                    <p>
+                        Unlike the application's home page and actual,
+                        this is just something to explain the formula used for the calculations.
+                    </p>
+                    <hr/>
+                    <h2>Minutes</h2>
+                    <p>
+                        Every 60 seconds is a minute, to convert minutes to second just use the expression below:
+                        <br/>
+                        <code>
+                            | M x 60 |
+                        </code>;
+                        
+                            Let M be the value of minutes, given the example, where M is 5;
+                        <br/>
+                        <code>
+                            | 5 x 60 = 300|
+                        </code>
+                        <br/>
+                        5 minutes is equal to 300 seconds.
+                    </p>
+                    <p>
+                        Now from hours to minutes;
+                        Keep in mind that every 1 hour is equivalent to 60 minutes; Use the following expression:
+                        <br/>
+                        <code>| H x 60 |</code>; Let H be the value of the hour to be converted; Given the example where H is 12;
+                        <br/>
+
+                        12 x 60 = 720 > minutes equals 12 hours
+                    </p>
+                    <hr/>
+                    <h2>Hours</h2>
+                    <p>
+                        We've already converted hours to minutes, but what about seconds?
+                        <br/>
+                        We will use the above two expressions briefly;
+                        <br/>
+                        <code>
+                            HM = H x 60 // Let H be the hour value to be converted to minutes
+                            <br/>
+                            HS = HM x 60 // HM the value of hours in minutes times the value of one minute in one second
+                            <br/>
+                            HS = (H x 60) 60 // Summarized form
+                            <br/>
+                            H = 5
+                            // Practical example
+                            <br/>
+                            HS = (5 x 60) 60
+                            <br/>
+                            HS = 300 x 60
+                            <br/>
+                            HS = 18000
+                        </code>
+                        <br/>
+                        So 5 hours will be equivalent to 300 minutes (HM value) and 18000 Seconds (HS value)
+                    </p>
+                    <hr/>
+                    <h2>Days</h2>
+                       <h3>Days to hours</h3>
+                        <p>
+                            We know that every 24 hours makes a day;
+                            So the expression is simple, D x 24;
+                            Let D be the value of day(s).
+                            <br/>
+                            3 x 24 = 72; 72 hours equals 3 days.
+                        </p>
+                       <h3>Days to minutes</h3>
+                       <p>
+                            We know that every 24 hours makes a day;
+                            So the expression is simple, (D x 24) x 60;
+                            Let D be the day(s) value.
+                            <br/>
+                            And as we know, always resolve the account that appears in parentheses first;
+                            Then:
+                            <br/>
+                            <code>
+                                DM = (10 x 24) x 60
+                                <br/>
+                                DM = 240 x 60 // value of days in hours times 60 minutes (1 hour)
+                                <br/>
+                                DM = 14400 minutes of 10 days
+                            </code>
+                        </p>
+                       <h3>Days to seconds</h3>
+                       <p>
+                            We know that every 24 hours makes a day;
+                            So the expression is simple, ((D x 24) x 60) x 60;
+                            Let D be the value of day(s).
+                            <br/>
+                            And as we know, always resolve the account that appears in parentheses first;
+                            Then:
+                            <br/>
+                            <code>
+                                DS = ((2 x 24) x 60) x 60
+                                <br/>
+                                DS = (48 x 60) x 60 // Hourly value times 60 minutes
+                                <br/>
+                                DS = 2880 x 60 // Days value in minutes times 60 seconds (one minute)
+                                <br/>
+                                DS = 172800
+                                     
+                            </code>
+                        </p>
+                </main>
+            `)
+        </script>
+    </body>
+</html>
